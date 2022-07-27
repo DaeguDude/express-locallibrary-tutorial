@@ -1,41 +1,41 @@
-var Author = require("../modles/author");
+var Genre = require("../models/genre");
 
-// Display list of all Authors
-exports.author_list = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author list");
+// Display list of all Genre.
+exports.genre_list = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre list");
 };
 
-// Display detail page for a specific Author.
-exports.author_detail = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author detail: " + req.parms.id);
+// Display detail page for a specific Genre.
+exports.genre_detail = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre detail: " + req.params.id);
 };
 
-// Display Author create form on GET
-exports.author_create_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author create GET");
+// Display Genre create form on GET.
+exports.genre_create_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre create GET");
 };
 
-// Handle Author cretae on POST
-exports.author_create_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author create POST");
+// Handle Genre create on POST.
+exports.genre_create_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre create POST");
 };
 
-// Display Author delete form on GET.
-exports.author_delete_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author delete GET");
+// Display Genre delete form on GET.
+exports.genre_delete_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre delete GET");
 };
 
-// Handle Author delete on POST
-exports.author_delete_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author delte POST");
+// Handle Genre delete on POST.
+exports.genre_delete_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre delete POST");
 };
 
-// Display Author update form on GET.
-exports.author_update_get = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author update GET");
+// Display Genre update form on GET.
+exports.genre_update_get = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre update GET");
 };
 
-// Handle Author update on POST.
-exports.author_update_post = function (req, res) {
-  res.send("NOT IMPLEMENTED: Author update POST");
+// Handle Genre update on POST.
+exports.genre_update_post = function (req, res) {
+  res.send("NOT IMPLEMENTED: Genre update POST");
 };
