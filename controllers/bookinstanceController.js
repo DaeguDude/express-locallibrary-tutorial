@@ -1,4 +1,5 @@
 var BookInstance = require("../models/bookinstance");
+var async = require("async");
 const { body, validationResult } = require("express-validator");
 var Book = require("../models/book");
 
@@ -111,8 +112,24 @@ exports.bookinstance_create_post = [
 
 // Display BookInstance delete form on GET.
 exports.bookinstance_delete_get = function (req, res, next) {
-  // NOTE: I can reference Delete Author GET, author_delete.pug
-  res.send("NOT IMPLEMENTED: BookInstance delete GET");
+  // I need to show Do I really want to delete this author?
+  async.parallel(
+    {
+      bookinstance(callback) {
+        BookInstance.findById(req.params.id).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+
+      res.render("bookinstance_delete", {
+        title: "Delete Bookinstance",
+        bookinstance: results.bookinstance,
+      });
+    }
+  );
 };
 
 // Handle BookInstance delete on POST.
