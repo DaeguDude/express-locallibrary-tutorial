@@ -1,0 +1,10 @@
+Challenge: Implement the delete pages for the 
+- 'Book'
+- 'BookInstance'
+- 'Genre'
+
+Deleting a BookInstance is the easiest of all because there are no
+dependent objects. In this case, you can just find the associated record
+and delete it.
+
+- Implement to delete a Bookinstance 
