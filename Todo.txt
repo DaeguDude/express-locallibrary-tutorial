@@ -1,13 +1,2 @@
-Challenge: Implement the delete pages for the 
-- 'Book' - ()
-- 'BookInstance' - (O)
-- 'Genre' - (Working on....)
-
-----------------------------------
-
-Work in the same way as Delete Author.
-
-- If Author has books related to them, they can't delete it.
-- So...If genre has books related to them, they can't delete it either.
-
-Then I can reference how delete author has been implemented and bring it to genre.
+Implement the update pages for the BookInstance, Author, and Genre models, linking
+them from the associated detail pages in the same way as our Book update page.
