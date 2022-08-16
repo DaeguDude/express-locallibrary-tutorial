@@ -229,7 +229,6 @@ exports.author_update_post = [
     .isISO8601()
     .toDate(),
 
-  // Create a new author object to save in the DB
   (req, res, next) => {
     const errors = validationResult(req);
 
@@ -241,7 +240,6 @@ exports.author_update_post = [
       });
       return;
     } else {
-      // Create an Author object with escaped and trimmed data.
       var author = new Author({
         first_name: req.body.first_name,
         family_name: req.body.family_name,
@@ -264,7 +262,4 @@ exports.author_update_post = [
       );
     }
   },
-
-  // If errors - re-render the update view with errors
-  // Data from form is valid. Update the bookinstnace
 ];
